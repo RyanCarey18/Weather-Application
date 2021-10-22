@@ -1,0 +1,84 @@
+:root {
+  --color1: rgb(85, 116, 255);
+  --color2: rgb(0, 5, 70);
+  --mono: rgb(149, 153, 153);
+}
+header {
+  text-align: center;
+  background-image: linear-gradient(to right, var(--color1), var(--color2));
+  color: white;
+  padding: 10px 0;
+  font-weight: 10;
+}
+
+#cityBtn {
+  margin: 20px 0;
+  background-color: var(--color1);
+}
+
+#city-input {
+  height: 50px;
+  font-size: 25px;
+  border-radius: 7px;
+}
+
+#line {
+  padding: 2px;
+  background-color: gray;
+}
+
+.recent-city {
+  margin-top: 10px;
+  background-color: var(--mono);
+  color: black;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.current-weather {
+  outline: solid black 1px;
+  margin-top: 10px;
+  font-weight: bolder;
+}
+
+.cur-weather-content {
+  margin-left: 5px;
+}
+
+.favorable {
+  background-color: green;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+.severe {
+  background-color: red;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+.moderate {
+  background-color: yellow;
+  padding: 0 20px;
+  border-radius: 5px;
+}
+
+.five-day {
+  background-color: var(--color2);
+  margin: 5px 15px;
+  color: white;
+  line-height: 30px;
+  padding: 10px;
+  font-size: 20px;
+}
+/* GIVEN a weather dashboard with form inputs
+WHEN I search for a city
+THEN I am presented with current and future conditions for that city and that city is added to the search history
+WHEN I view current weather conditions for that city
+THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
+WHEN I view the UV index
+THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
+WHEN I view future weather conditions for that city
+THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
+WHEN I click on a city in the search history
+THEN I am again presented with current and future conditions for that city */
