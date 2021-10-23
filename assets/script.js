@@ -14,7 +14,6 @@ const weatherEl = document.getElementById("weather-side");
 //pulls the value of the input box and creates a url for geo api
 function citySearch(searchInput) {
   if (!searchInput) {
-    console.error("You need a search input value!");
     return;
   }
 
