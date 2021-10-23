@@ -9,10 +9,10 @@ const windEl = document.getElementById("cur-wind");
 const humidityEl = document.getElementById("cur-humidity");
 const uvEl = document.getElementById("uv");
 const forecastEl = $("#forecast");
+const weatherEl = document.getElementById("weather-side");
 
-function citySearch() {
-  const searchInput = document.getElementById("city-input").value;
-
+//pulls the value of the input box and creates a url for geo api
+function citySearch(searchInput) {
   if (!searchInput) {
     console.error("You need a search input value!");
     return;
@@ -25,18 +25,17 @@ function citySearch() {
     apiKey +
     "&limit=1";
 
-  cities.unshift(searchInput);
-  grabGeoData(url);
-  renderCities();
+  grabGeoData(url, searchInput);
 }
 
-function grabGeoData(url) {
+//Get the latitude and longitude of the user input city from geo api.
+function grabGeoData(url, searchInput) {
   fetch(url)
     .then(function (response) {
       if (!response.ok) {
         throw response.json();
       }
-
+      console.log(response);
       return response.json();
     })
     .then(function (data) {
@@ -53,10 +52,20 @@ function grabGeoData(url) {
         "&exclude=minutely,hourly,alerts&units=imperial" +
         "&appid=" +
         apiKey;
+
+      if (cities.includes(searchInput)) {
+        console.log("yes");
+      } else {
+        cities.unshift(searchInput);
+        console.log("dogs");
+      }
+      renderCities();
       grabWeatherData(dataUrl, cityName);
     });
 }
 
+//Uses the latitude and longitude gathered from
+//other geo api to get weather data from the all in one api
 function grabWeatherData(url, cityName) {
   fetch(url)
     .then(function (response) {
@@ -67,12 +76,12 @@ function grabWeatherData(url, cityName) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
       renderCurrent(data, cityName);
       render5Day(data);
     });
 }
 
+//renders the current weather to the page
 function renderCurrent(data, cityName) {
   const curCity = cityName;
   const curDate = moment
@@ -99,10 +108,11 @@ function renderCurrent(data, cityName) {
   } else {
     uvEl.className = "moderate";
   }
+  weatherEl.classList.remove("hidden");
 }
 
+//renders the next 5 days to the page
 function render5Day(data) {
-  console.log(data);
   forecastEl.empty();
   for (let i = 1; i < 6; i++) {
     const date = moment
@@ -127,6 +137,7 @@ function render5Day(data) {
   }
 }
 
+//renders the list of cities to the page
 function renderCities() {
   cityList.innerHTML = "";
   for (i = 0; i < cities.length; i++) {
@@ -139,9 +150,20 @@ function renderCities() {
       "recent-city"
     );
     cityButton.textContent = cities[i];
+    cityButton.addEventListener("click", function (e) {
+      e.preventDefault();
 
+      const searchInput = cityButton.textContent;
+      citySearch(searchInput);
+    });
     cityList.append(cityButton);
   }
 }
-renderCities();
-searchBtn.addEventListener("click", citySearch);
+
+//Watches for click on search button and then grabs text from input box.
+searchBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const searchInput = document.getElementById("city-input").value.toLowerCase();
+  citySearch(searchInput);
+});

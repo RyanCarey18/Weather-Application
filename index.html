@@ -43,9 +43,9 @@
           <div id="city-list"></div>
         </div>
         <!-- Weather Side -->
-        <div class="col-9">
+        <div id="weather-side" class="col-9 hidden">
           <!-- Current Weather -->
-          <div class="col-12 current-weather">
+          <div id="current" class="col-12 current-weather">
             <div class="cur-weather-content">
               <h1>
                 <span id="city-date"></span
@@ -57,20 +57,10 @@
               <p id="cur-uv">UV Index: <span id="uv"></span></p>
             </div>
           </div>
-          <div id="forecast" class="row">
-            <!-- 5 Day Forecast -->
-            <h1 class="col-12">5-Day Forecast:</h1>
-            <div class="col five-day">
-              <h2 id="fut-date">3/31/2021</h2>
-              <img id="fut-icon" src="" alt="Symbol for Future Weather" />
-              <p>Temp: 73.72 *F</p>
-              <p id="fut-wind">Wind: 9.53 MPH</p>
-              <p id="fut-humidity">Humidity: 66%</p>
-            </div>
-            <div class="col five-day">2</div>
-            <div class="col five-day">3</div>
-            <div class="col five-day">4</div>
-            <div class="col five-day">5</div>
+          <!-- 5 Day Forecast -->
+          <div>
+            <h2>5-Day Forecast:</h2>
+            <div id="forecast" class="row"></div>
           </div>
         </div>
       </div>

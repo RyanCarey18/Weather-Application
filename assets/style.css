@@ -33,6 +33,7 @@ header {
   color: black;
   font-weight: bold;
   text-transform: capitalize;
+  border-color: var(--mono);
 }
 
 .current-weather {
@@ -63,6 +64,9 @@ header {
   border-radius: 5px;
 }
 
+.hidden {
+  display: none;
+}
 .five-day {
   background-color: var(--color2);
   margin: 5px 15px;
