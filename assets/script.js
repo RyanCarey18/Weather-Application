@@ -53,10 +53,8 @@ function grabGeoData(url, searchInput) {
         apiKey;
 
       if (cities.includes(searchInput)) {
-        console.log("yes");
       } else {
         cities.unshift(searchInput);
-        console.log("dogs");
       }
       renderCities();
       grabWeatherData(dataUrl, cityName);
@@ -164,5 +162,6 @@ searchBtn.addEventListener("click", function (e) {
   e.preventDefault();
 
   const searchInput = document.getElementById("city-input").value.toLowerCase();
+  document.getElementById("city-input").value = "";
   citySearch(searchInput);
 });
