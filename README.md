@@ -1,25 +1,8 @@
-# homework-06
+# Weather Application
 
-## Functionality
+## Link
 
-    The page loads when you open the url
-    When first loaded all it has is a search bar.
-    When you type in a city into the bar and click search it loads weather
-    the weather it loads is for the current time as well as the next 5 days
-    When you click search it also adds that to your search history
-    if you click one of your previous searches for the data again
-
-## Developement Process
-
-    I started by setting out a basic layout in HTML and then adding a basic template with bootstrap so I would know where to place things.
-    Then I started with the search functionality.
-    Originally just pulling and placing the current weather.
-    I then developed the process to print the 5 day forecast.
-    Finally I developed the search history programming.
-
-## Usage
-
-    Type in a city you want to know the weather of and hit search. Then you can just read the data and know the weather currently and for the next 5 days.
+Click [here](https://ryancarey18.github.io/homework-06/) to go to my deployed page.
 
 ## Technologies Used
 
@@ -28,16 +11,28 @@
     HTML
     OpenWeather api
 
-## Challenges Encountered
+## Usage
 
-    I did not find too many encounters with this project. I feel as if I had a pretty good understanding of all of these concepts used.
+    Type in a city you want to know the weather of and hit search. It will show you the current weather as well as the forecast for the next 5 days.
 
-## Link
-
-Click [here](https://ryancarey18.github.io/homework-06/) to go to my deployed page.
+## Pictures
 
 Pictures of my Site in action:
 Before any searches:
 ![screenshot_01](https://user-images.githubusercontent.com/86500418/138573468-98df6788-e4a1-4275-b07a-8826a41e2b24.png)
 After many Searches:
 ![screenshot_02](https://user-images.githubusercontent.com/86500418/138573473-8064e0c5-e014-4932-8254-4dbb9d676a25.png)
+
+## License
+
+Copyright 2021 Ryan Carey
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Contact Info
+
+Ryan.Carey18@gmail.com
