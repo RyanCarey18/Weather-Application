@@ -2,7 +2,7 @@
 
 ## Link
 
-Click [here](https://ryancarey18.github.io/homework-06/) to go to my deployed page.
+Click [here](https://ryancarey18.github.io/Weather-Application/) to go to my deployed page.
 
 ## Technologies Used
 
